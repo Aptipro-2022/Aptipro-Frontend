@@ -77,7 +77,8 @@
               "browserTarget": "Edclub-Angular:build:production"
             },
             "development": {
-              "browserTarget": "Edclub-Angular:build:development"
+              "browserTarget": "Edclub-Angular:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
