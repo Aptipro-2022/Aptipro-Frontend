@@ -1,0 +1,573 @@
+<!-- <app-menu></app-menu> -->
+
+<!--Scenaiors Navbar starts-->
+
+<header>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">aptipro</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" (click)="toggleNavbar()" style="float: right; margin:auto; color:white;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar" [ngClass]="{ 'show': navbarOpen }">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="login">Stats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Badges</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Current Lesson
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="">Link 1</a>
+                            <a href="">Link 2</a>
+                            <a href="">Link 3</a>
+                        </div>
+                    </div>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Save Progress</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--Scenaiors Navbar starts-->
+
+<!--Summary Start-->
+
+<div class="container fixed-top" id="progress">
+    <div class="container" id="progress-bar">
+        <span class="summary_value">0%</span>
+        progress
+        <span class="summary_sep">|</span>
+        <span class="summary_value">0</span>
+        stars
+        <span class="summary_sep">|</span>
+        <span class="summary_value">0</span>
+        points
+    </div>
+</div>
+
+<!--Summary End-->
+
+<!--Sidebar Starts-->
+
+<div class="lessons-nav" style="float: right; width: 180px;" role="navigation" aria-label="pagination">
+    <div style="position: fixed;">
+        <p>Pagination here</p>
+    </div>
+</div>
+
+<!--Sidebar Ends-->
+
+<!--Scenarios start-->
+
+<div class="container" id="scenarios-home">
+
+    <!--Home Row Header starts-->
+    <div class="row" id="scenarios-home-row-header">
+        <h2 style="font-size:40px; font-weight: 600;">Home Row</h2>
+    </div>
+    <!--Home Row Header ends-->
+
+    <!--Home row starts-->
+
+    <div class="box-row" id="home-row">
+        <div class="box-container" role="button" aria-label="Lesson 1, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">1</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 2, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">2</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 3, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">3</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 4, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">4</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 5, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">5</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 6, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">6</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Home row ends-->
+
+    <!--Row1 starts-->
+
+    <div class="box-row" id="row1">
+        <div class="box-container" role="button" aria-label="Lesson 7, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">7</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 8, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">8</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 9, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">9</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 10, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">10</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 11, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">11</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 12, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">12</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row1 ends-->
+
+    <!--Row2 starts-->
+
+    <div class="box-row" id="row2">
+        <div class="box-container" role="button" aria-label="Lesson 13, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">13</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 14, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">14</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 15, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">15</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 16, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">16</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 17, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">17</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 18, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">18</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row2 ends-->
+
+    <!--Row3 starts-->
+
+    <div class="box-row" id="row3">
+        <div class="box-container" role="button" aria-label="Lesson 19, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">19</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 20, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">20</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 21, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">21</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 22, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">22</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 23, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">23</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row3 ends-->
+
+    <!--Top Row starts-->
+
+    <!--Top Row Header starts-->
+
+    <div class="row" id="scenarios-top-row-header">
+        <h2 style="font-size:40px; font-weight: 600;">Top Row</h2>
+    </div>
+
+    <!--Top Row Header ends-->
+
+    <!--Row4 starts-->
+
+    <div class="box-row" id="row4">
+        <div class="box-container" role="button" aria-label="Lesson 24, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">24</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 25, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">25</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 26, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">26</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 27, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">27</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 28, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">28</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 29, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">29</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row4 ends-->
+
+    <!--Row5 starts-->
+
+    <div class="box-row" id="row5">
+        <div class="box-container" role="button" aria-label="Lesson 30, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">30</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 31, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">31</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 32, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">32</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 33, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">33</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 34, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">34</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 35, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">35</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row5 ends-->
+
+    <!--Row6 starts-->
+
+    <div class="box-row" id="row6">
+        <div class="box-container" role="button" aria-label="Lesson 36, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">36</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 37, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">37</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 38, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">38</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 39, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">39</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 40, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">40</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 41, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">41</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row6 ends-->
+
+    <!--Row7 starts-->
+
+    <div class="box-row" id="row7">
+        <div class="box-container" role="button" aria-label="Lesson 42, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">42</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 43, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">43</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 44, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">44</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 45, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">45</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 46, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">46</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 47, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">47</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row7 ends-->
+
+    <!--Row8 starts-->
+
+    <div class="box-row" id="row8">
+        <div class="box-container" role="button" aria-label="Lesson 48, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">48</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 49, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">49</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 50, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">50</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 51, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">51</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row8 ends-->
+
+    <!--Top Row ends-->
+
+    <!--Bottom Row starts-->
+
+     <!--Bottom Row Header starts-->
+
+     <div class="row" id="scenarios-top-row-header">
+        <h2 style="font-size:40px; font-weight: 600;">Top Row</h2>
+    </div>
+
+    <!--Bottom Row Header ends-->
+
+    <!--Row9 starts-->
+
+    <div class="box-row" id="row8">
+        <div class="box-container" role="button" aria-label="Lesson 52, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">52</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 53, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">53</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 54, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">54</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 55, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">55</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 56, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">56</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+        <div class="box-container" role="button" aria-label="Lesson 57, Introduction to Aptitude">
+            <div class="box">
+                <div class="tile-number">57</div>
+                <img src="../../assets/images/scenarios.png" alt="" class="tile-image">
+                <div class="tile-name" title="Introduction to Aptitude">Introduction to typing</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Row9 ends-->
+
+    <!--Bottom Row ends-->
+
+</div>
+
+<!--Scenarios end-->
+
+<app-footer></app-footer>

@@ -1,0 +1,300 @@
+#userprofile{
+    margin-top: 120px;
+    font-size: 16px;
+}
+
+#userdetails{
+    background: #0042AF;
+    border-radius: 10px;
+    padding: 60px;
+    color: #EFEFEF;
+    margin-bottom: 20px;
+}
+
+#userdetails img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Progress bar style starts */
+
+.progress {
+    width: 150px;
+    height: 150px !important;
+    float: left; 
+    line-height: 150px;
+    background: none;
+    margin: 20px;
+    box-shadow: none;
+    position: relative;
+  }
+  .progress:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 12px solid grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .progress>span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .progress .progress-left {
+    left: 0;
+  }
+  .progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 12px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+  }
+  .progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+  }
+  .progress .progress-right {
+    right: 0;
+  }
+  .progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-1 1.8s linear forwards;
+  }
+  .progress .progress-value {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    line-height: 135px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+  .progress.white .progress-bar {
+    border-color: white;
+  }
+  .progress.blue .progress-left .progress-bar {
+    animation: loading-2 1.5s linear forwards 1.8s;
+  }
+  
+  @keyframes loading-1 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes loading-2 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(144deg);
+      transform: rotate(144deg);
+    }
+  }
+  @keyframes loading-3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+  }
+
+/* Progress bar style ends */
+
+#right{
+    background: #0042AF;
+    border-radius: 10px;
+    color: #EFEFEF;
+    padding: 5px 10px;
+}
+
+#right ul{
+    list-style: none;
+}
+#right li{
+    margin-top: 20px;
+}
+#right a{
+    text-decoration: none;
+    color: #EFEFEF;
+    font-size: 16px; 
+}
+
+/* Profile Section Style starts */
+
+#profile-section{
+    width: 95%;
+    float: left;
+    margin-bottom: 20px;
+    padding: 40px;
+    background: #FFFFFF;
+    border: 1px solid rgba(64, 64, 64, 0.2);
+    border-radius: 20px;
+}
+
+#profile-section h4{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.profile-section-symbols{
+    float: right; 
+    font-size: 16px;
+}
+
+/* Profile Section Style ends */
+
+/* Resume Upload Button style */
+
+.resume-button{
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    padding: 15px 80px;
+    background: #303030;
+    border-radius: 10px;
+}
+
+.resume-button a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 30px;
+    color: #EFEFEF;
+}
+/* Resume Upload Button style */
+
+/* Skills pill style */
+
+.skills-pill{
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 8px 24px 0px 24px;
+    background: #EFEFEF;
+    border: 1px solid #303030;
+    border-radius: 20px;
+}
+.skills-pill p{
+    font-weight: 300;
+}
+
+/* Skill pill style */
+
+/* Profile Experience style */
+
+
+#profile-experience img{
+    width: 126px;
+    height: 126px;
+}
+#experience-section{
+    padding: 20px 5px;
+    border-bottom: 1px solid grey;
+}
+
+/* Profile Experience style */
+
+/* Education section style */
+
+#education-section{
+padding: 20px 5px;
+border-bottom: 1px solid grey;
+}
+
+#education-section button{
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0.5px;
+}
+
+/* Education section style */
+
+/* Skills Table style */
+
+#skills-table{
+  align-items: center;
+  margin: auto;
+}
+#skills-table table{
+  margin: 10px 0;
+}
+.table-head{
+  border-bottom: 1px solid grey;
+}
+#skills-table tr{
+  margin: 10px;
+}
+
+/* Skills Table style */
+
+/* Project & Presentation Section style */
+
+#projects-section button{
+  vertical-align: middle;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0.5px;
+}
+
+/* Project & Presentation Section style */
+
+/* Accomplishment style */
+
+#accomplishment-rows{
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+}
+
+#accomplishment-rows h5{
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+/* Accomplishment style */
+
+/* Personal Details style */
+
+#languages-section table{
+  align-items: center;
+  margin: auto;
+}
+
+/* Personal Details style */

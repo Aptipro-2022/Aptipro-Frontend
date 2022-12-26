@@ -14,6 +14,11 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { AccloginComponent } from './acclogin/acclogin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { QuestionsComponent } from './questions/questions.component';
+import { QuestionsAdminComponent } from './questions-admin/questions-admin.component';
+import { ScenariosComponent } from './scenarios/scenarios.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     MenuComponent,
     FooterComponent,
-    AccloginComponent
+    AccloginComponent,
+    QuestionsComponent,
+    QuestionsAdminComponent,
+    ScenariosComponent,
+    UserprofileComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
