@@ -1,0 +1,92 @@
+.container{
+    margin: 110px auto;
+}
+
+#question-header{
+    text-align: center;
+    border: 30px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+    padding: 15px 10px 50px 10px;
+}
+
+#question-header p{
+    font-size: 24px;
+    width: 80%;
+}
+
+#question-options{
+    width: 100%;
+    height: auto;
+}
+
+#options-col{
+    text-align: center;
+    vertical-align: middle;
+    height: 40%;
+    background: #FFFFFF;
+    margin: 3% 3% 3% 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    align-items: center;
+}
+
+#options-col p{
+    font-size: 30px;
+    font-weight: 400;
+    color: #303030;
+    height: 45px;
+    line-height: 150px;
+}
+
+#question-formula{
+    margin-top: 10px;
+    background: #FFECEC;
+    border: 1px solid #404040;
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+#question-formula p{
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#question-notes{
+    background: #FFFFFF;
+    border: 1px solid rgba(64, 64, 64, 0.3);
+    border-radius: 20px;
+}
+
+#question-hint{
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+#question-hint p{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#question-submit{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#question-submit button{
+    background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%);
+    border: 1px solid #048841;
+    border-radius: 20px;
+    width: 172px;
+    height: 80px;
+}
+
+#question-submit span{
+    font-weight: 400;
+    font-size: 40px;
+    color: #048841;
+}
