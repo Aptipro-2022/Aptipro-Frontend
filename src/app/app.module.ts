@@ -19,6 +19,8 @@ import { QuestionsAdminComponent } from './questions-admin/questions-admin.compo
 import { ScenariosComponent } from './scenarios/scenarios.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { BlogComponent } from './blog/blog.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { BlogComponent } from './blog/blog.component';
     QuestionsAdminComponent,
     ScenariosComponent,
     UserprofileComponent,
-    BlogComponent
+    BlogComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { BlogComponent } from './blog/blog.component';
     FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

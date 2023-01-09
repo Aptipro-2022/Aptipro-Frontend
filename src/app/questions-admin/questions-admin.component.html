@@ -1,22 +1,29 @@
 <app-menu></app-menu>
 
-<div class="container">
+<!--<div class="container">
     <div class="row" id="question-header">
-        <p style="text-align: justify;">Q1. Add Question 1</p>
+        <mat-form-field appearance="fill">
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput placeholder="Add Question here"></textarea>
+        </mat-form-field>
     </div>
     <div class="row" id="question-options">
         <div class="col-sm-6 col-md-6 col-xs-12">
             <div class="col-sm-5 col-md-5 col-xs-5" id="options-col">
-                <p>+</p>
+                <p>+A</p>
+                <input type="text" name="optionA"> 
             </div>
             <div class="col-sm-5 col-md-5 col-xs-5" id="options-col">
-                <p>+</p>
+                <p>+B</p>
+                <input type="text" name="optionB">
             </div>
             <div class="col-sm-5 col-md-5 col-xs-5" id="options-col">
-                <p>+</p>
+                <p>+C</p>
+                <input type="text" name="optionC">
             </div>
             <div class="col-sm-5 col-md-5 col-xs-5" id="options-col">
-                <p>+</p>
+                <p>+D</p>
+                <input type="text" name="optionD">
             </div>
         </div>
         <div class="col-sm-6 col-md-6 col-xs-12">
@@ -64,6 +71,17 @@
             <button type="submit"><span>Cool</span></button>
         </div>
     </div>
+</div>-->
+
+<div class="container">
+    <form>
+        <div class="row" id="question-header">
+            <mat-form-field appearance="fill">
+                <mat-label>Add Question</mat-label>
+                <textarea matInput class="questiontext" placeholder="Add Question here"></textarea>
+            </mat-form-field>
+        </div>
+    </form>
 </div>
 
 <app-footer></app-footer>
