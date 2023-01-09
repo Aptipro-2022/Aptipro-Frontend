@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginserviceService } from '../loginservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-acclogin',
@@ -9,8 +10,8 @@ import { LoginserviceService } from '../loginservice.service';
 export class AccloginComponent implements OnInit {
 
   public signupform:boolean = true;
-  public details = { firstName:'', email:'', password:''};
-  constructor(private loginservice : LoginserviceService) { }
+  public details = { phone :''};
+  constructor(private router : Router, private loginservice : LoginserviceService ) { }
 
   ngOnInit(): void {
   }
@@ -28,8 +29,11 @@ export class AccloginComponent implements OnInit {
   createAcc()
   {
     console.log(this.details);
-    this.loginservice.createAccount(this.details);
   }
 
-  login () {}
+  proceed() {
+    //this.router.navigate(['/login-form']);
+    console.log(this.details);
+    this.loginservice.getdetails(this.details);
+  }
 }
