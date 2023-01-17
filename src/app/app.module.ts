@@ -20,6 +20,8 @@ import { ScenariosComponent } from './scenarios/scenarios.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { BlogComponent } from './blog/blog.component';
 import { TestingComponent } from './testing/testing.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { TestingComponent } from './testing/testing.component';
     ScenariosComponent,
     UserprofileComponent,
     BlogComponent,
-    TestingComponent
+    TestingComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { TestingComponent } from './testing/testing.component';
     FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

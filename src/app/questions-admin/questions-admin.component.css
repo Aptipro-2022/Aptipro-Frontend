@@ -107,3 +107,20 @@
     font-size: 40px;
     color: #048841;
 }
+
+::ng-deep .mat-form-field-empty.mat-form-field-label, .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    font-size: 20px;
+}
+
+.question-text {
+    margin-top : 20px;
+    height: 100px;
+}
+
+textarea.mat-input-element {
+    padding: 2px 0;
+    margin: -2px 0;
+    height: 100px;
+    font-size: 20px;
+    margin-top: 30px;
+}

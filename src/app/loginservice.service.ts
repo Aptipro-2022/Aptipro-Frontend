@@ -9,12 +9,22 @@ export class LoginserviceService {
 
   constructor(private http : HttpClient, private router:Router) { }
 
-  createAccount(details = { firstName: '', email:'', password:''})
+  createAccount(Userdetails = {  phone : '', email:'', country:'', state:'', Zipcode:'', gcollege:'', branch:'', gfrom:'', gto:'' })
   {
-    return this.http.post('http://localhost:3000/login', details).subscribe(res => {
+    return this.http.post('http://localhost:3000/register', Userdetails, {responseType: 'text'}).subscribe(res => {
       console.log(res);
-      var token = res;
-      localStorage.setItem('token', JSON.stringify(token));
+      this.router.navigate(['/acclogin']);
+    })
+  }
+
+  getdetails(details = {phone : ''}) 
+  {
+    return this.http.post('http://localhost:3000/userdetails', details).subscribe(res => {
+      if(res != null)
+      {
+        this.router.navigate(['/scenarios']);
+      }
     })
   }
 }
+
