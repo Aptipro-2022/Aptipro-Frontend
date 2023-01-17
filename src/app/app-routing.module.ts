@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { QuestionsAdminComponent } from './questions-admin/questions-admin.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { ScenariosComponent } from './scenarios/scenarios.component';
+import { TestingComponent } from './testing/testing.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 
 const routes: Routes = [
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   {
     path : 'questions-admin', component: QuestionsAdminComponent
+  },
+  {
+    path : 'testing', component: TestingComponent
   }
 ];
 

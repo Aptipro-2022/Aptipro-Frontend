@@ -19,6 +19,7 @@ import { QuestionsAdminComponent } from './questions-admin/questions-admin.compo
 import { ScenariosComponent } from './scenarios/scenarios.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { BlogComponent } from './blog/blog.component';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BlogComponent } from './blog/blog.component';
     QuestionsAdminComponent,
     ScenariosComponent,
     UserprofileComponent,
-    BlogComponent
+    BlogComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,
