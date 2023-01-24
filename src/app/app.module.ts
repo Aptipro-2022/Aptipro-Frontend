@@ -19,6 +19,7 @@ import { QuestionsAdminComponent } from './questions-admin/questions-admin.compo
 import { ScenariosComponent } from './scenarios/scenarios.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { BlogComponent } from './blog/blog.component';
+import { TestingComponent } from './testing/testing.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule  } from '@angular/forms';
@@ -40,6 +41,7 @@ import { DataEffects } from './redux/effects/user-details.effects';
     ScenariosComponent,
     UserprofileComponent,
     BlogComponent,
+    TestingComponent,
     LoginFormComponent
   ],
   imports: [
