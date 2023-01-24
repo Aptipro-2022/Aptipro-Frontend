@@ -76,10 +76,80 @@
 <div class="container">
     <form>
         <div class="row" id="question-header">
-            <mat-form-field appearance="fill">
-                <mat-label>Add Question</mat-label>
-                <textarea matInput class="questiontext" placeholder="Add Question here"></textarea>
-            </mat-form-field>
+            <label>Add Question</label>
+            <input type="text" class="questiontext form-control" name="question" placeholder="Add Question here" [(ngModel)]="questiondetails.question">
+        </div>
+
+        <div class="row" id="question-options">
+            <div class="col-sm-6 col-md-6 col-xs-12">
+                <div class="col-sm-5 col-md-5 col-xs-5" id="options-col">
+                    <p>+A</p>
+                    <input type="text" class="form-control options" name="optionA" [(ngModel)]="questiondetails.option1">
+                </div>
+                <div class="col-sm-5 col-md-5 col-xs-5" id="options-col">
+                    <p>+B</p>
+                    <input type="text" class="form-control options" name="optionB" [(ngModel)]="questiondetails.option2">
+                </div>
+                <div class="col-sm-5 col-md-5 col-xs-5" id="options-col">
+                    <p>+C</p>
+                    <input type="text" class="form-control options" name="optionC" [(ngModel)]="questiondetails.option3">
+                </div>
+                <div class="col-sm-5 col-md-5 col-xs-5" id="options-col">
+                    <p>+D</p>
+                    <input type="text" class="form-control options" name="optionD" [(ngModel)]="questiondetails.option4">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-12 mt-2">
+                <div class="row" id="question-formula">
+                    <p>
+                        Add Hint 1 | 
+                        <span><input type="text" name="Hint1" [(ngModel)]="questiondetails.hint1"></span>
+                        <span class="hint-id">
+                            S1
+                        </span>
+                    </p>
+                </div>
+                <div class="row" id="question-formula">
+                    <p>
+                        Add Hint 2 | 
+                        <span><input type="text" name="Hint2" [(ngModel)]="questiondetails.hint2"></span>
+                        <span class="hint-id">
+                            S2
+                        </span>
+                    </p>
+                </div>
+                <div class="row" id="question-formula">
+                    <p>
+                        Add Hint 3 | 
+                        <span><input type="text" name="Hint3" [(ngModel)]="questiondetails.hint3"></span>
+                        <span class="hint-id">
+                            S3
+                        </span>
+                    </p>
+                </div>
+                <div class="row" id="question-formula">
+                    <p>
+                        Add Hint 4 | 
+                        <span><input type="text" name="Hint4" [(ngModel)]="questiondetails.hint4"></span>
+                        <span class="hint-id">
+                            S4
+                        </span>
+                    </p>
+                </div>
+                <div class="row" id="question-formula">
+                    <p>
+                        Add Answer | 
+                        <span><input type="text" name="Hint4" [(ngModel)]="questiondetails.answer"></span>
+                        <span class="hint-id">
+                            ANS
+                        </span>
+                    </p>
+                </div>
+
+                <div class="row pt-5">
+                    <button type="submit" class="btn btn-primary" (click)="addquestion()">cool</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>

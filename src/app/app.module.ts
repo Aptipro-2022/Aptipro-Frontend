@@ -21,6 +21,12 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { BlogComponent } from './blog/blog.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule  } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { userPhoneReducer } from './redux/reducers/user-phone.reducer';
+import { userdetailsReducer } from './redux/reducers/user-details.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { DataEffects } from './redux/effects/user-details.effects';
 
 @NgModule({
   declarations: [
@@ -46,7 +52,10 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    StoreModule.forRoot({ userPhone : userPhoneReducer, userdetails : userdetailsReducer}),
+    EffectsModule.forRoot([DataEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
