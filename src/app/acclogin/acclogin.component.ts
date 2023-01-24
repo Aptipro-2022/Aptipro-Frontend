@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginserviceService } from '../loginservice.service';
-import { Router } from '@angular/router';
+import { userPhoneState } from '../redux/state/user-phone';
+import { Store } from '@ngrx/store';
+import { setUserPhone } from '../redux/actions/user-phone.action';
+import { loadData } from '../redux/actions/user-details.action';
+import { selectUserDetails } from '../redux/selectors/user-details.selector';
 
 @Component({
   selector: 'app-acclogin',
@@ -10,8 +13,8 @@ import { Router } from '@angular/router';
 export class AccloginComponent implements OnInit {
 
   public signupform:boolean = true;
-  public details = { phone :''};
-  constructor(private router : Router, private loginservice : LoginserviceService ) { }
+  userPhone : userPhoneState = { phone:'' };
+  constructor(private store : Store) { }
 
   ngOnInit(): void {
   }
@@ -28,12 +31,11 @@ export class AccloginComponent implements OnInit {
 
   createAcc()
   {
-    console.log(this.details);
+    // console.log(this.details);
   }
 
-  proceed() {
-    //this.router.navigate(['/login-form']);
-    console.log(this.details);
-    this.loginservice.getdetails(this.details);
+  proceed(userPhone : userPhoneState) {
+    this.store.dispatch(setUserPhone({userPhone}));
+    this.store.dispatch(loadData());
   }
 }

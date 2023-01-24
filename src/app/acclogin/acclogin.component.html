@@ -9,11 +9,11 @@
             <form class="phoneform">
                 <div class="phone">
                     <label class="phonelabel">Mobile</label>
-                    <input type="phone" class="form-control phoneinput" name="phoneNumber" [(ngModel)]="details.phone">
+                    <input type="phone" class="form-control phoneinput" name="phoneNumber" [(ngModel)]="userPhone.phone">
                 </div>
 
                 <div class="mt-4 submitbtn">
-                    <button type="submit" (click)="proceed()" class="btn submit">proceed</button>
+                    <button type="submit" (click)="proceed(userPhone)" class="btn submit">proceed</button>
                 </div>
             </form>
         </div>
