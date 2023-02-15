@@ -5,6 +5,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { UserDetails } from '../models/userdetails';
 import { selectUserPhone } from '../redux/selectors/user-phone.selector';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +39,12 @@ export class LoginserviceService {
     this.store.select(selectUserPhone).subscribe(phone => {
       this.phone = phone;
     })
-    return this.http.get(`http://localhost:3000/userdetails/${this.phone}`);
+    var url = environment.apiurl + "userdetails/" + this.phone;
+    return this.http.get(url);
+  }
+
+  getQuestion() : Observable<any> {
+    return this.http.get(`http://localhost:3000/questions`);
   }
 }
 

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiurl:'http://aptipro.in:3000/'
 };

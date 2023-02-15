@@ -27,6 +27,10 @@ import { userPhoneReducer } from './redux/reducers/user-phone.reducer';
 import { userdetailsReducer } from './redux/reducers/user-details.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { DataEffects } from './redux/effects/user-details.effects';
+import { QuestionEffects } from './redux/effects/questions.effects';
+import { QuestionsReducer } from './redux/reducers/questions.reducer';
+import { MatDialogModule } from '@angular/material/dialog';
+import { QuestionsDialogComponent } from './questions-dialog/questions-dialog.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,8 @@ import { DataEffects } from './redux/effects/user-details.effects';
     UserprofileComponent,
     BlogComponent,
     TestingComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    QuestionsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -55,8 +60,9 @@ import { DataEffects } from './redux/effects/user-details.effects';
     HttpClientModule,
     MatInputModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({ userPhone : userPhoneReducer, userdetails : userdetailsReducer}),
-    EffectsModule.forRoot([DataEffects])
+    MatDialogModule,
+    StoreModule.forRoot({ userPhone : userPhoneReducer, userdetails : userdetailsReducer, questions : QuestionsReducer}),
+    EffectsModule.forRoot([DataEffects, QuestionEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
