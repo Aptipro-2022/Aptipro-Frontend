@@ -21,7 +21,7 @@ import { BlogComponent } from './blog/blog.component';
 import { TestingComponent } from './testing/testing.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule  } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { userPhoneReducer } from './redux/reducers/user-phone.reducer';
 import { userdetailsReducer } from './redux/reducers/user-details.reducer';
@@ -31,6 +31,7 @@ import { QuestionEffects } from './redux/effects/questions.effects';
 import { QuestionsReducer } from './redux/reducers/questions.reducer';
 import { MatDialogModule } from '@angular/material/dialog';
 import { QuestionsDialogComponent } from './questions-dialog/questions-dialog.component';
+import { VerifyOtpComponent } from './verifyotp/verifyotp.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { QuestionsDialogComponent } from './questions-dialog/questions-dialog.co
     BlogComponent,
     TestingComponent,
     LoginFormComponent,
-    QuestionsDialogComponent
+    QuestionsDialogComponent,
+    VerifyOtpComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,10 +63,14 @@ import { QuestionsDialogComponent } from './questions-dialog/questions-dialog.co
     MatInputModule,
     ReactiveFormsModule,
     MatDialogModule,
-    StoreModule.forRoot({ userPhone : userPhoneReducer, userdetails : userdetailsReducer, questions : QuestionsReducer}),
-    EffectsModule.forRoot([DataEffects, QuestionEffects])
+    StoreModule.forRoot({
+      userPhone: userPhoneReducer,
+      userdetails: userdetailsReducer,
+      questions: QuestionsReducer,
+    }),
+    EffectsModule.forRoot([DataEffects, QuestionEffects]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -8,43 +8,60 @@ import { selectUserPhone } from '../redux/selectors/user-phone.selector';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginserviceService {
+  userdetails!: UserDetails;
 
-  userdetails! : UserDetails;
+  phone: string = '';
 
-  phone : string = '';
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private store: Store
+  ) {}
 
-  constructor(private http : HttpClient, private router:Router, private store : Store) { }
-
-  createAccount(Userdetails = {  phone : '', email:'', country:'', state:'', Zipcode:'', gcollege:'', branch:'', gfrom:'', gto:'' })
-  {
-    return this.http.post('http://localhost:3000/register', Userdetails, {responseType: 'text'}).subscribe(res => {
-      console.log(res);
-      this.router.navigate(['/acclogin']);
-    })
+  createAccount(
+    Userdetails = {
+      phone: '',
+      email: '',
+      country: '',
+      state: '',
+      Zipcode: '',
+      gcollege: '',
+      branch: '',
+      gfrom: '',
+      gto: '',
+    }
+  ) {
+    return this.http
+      .post('http://localhost:3000/register', Userdetails, {
+        responseType: 'text',
+      })
+      .subscribe((res) => {
+        console.log(res);
+        this.router.navigate(['/acclogin']);
+      });
   }
 
-  createNewAccount()
-  {
-    return this.http.post('http://localhost:3000/register', {responseType: 'text'}).subscribe(res => {
-      console.log(res);
-    })
+  createNewAccount() {
+    return this.http
+      .post('http://localhost:3000/register', { responseType: 'text' })
+      .subscribe((res) => {
+        console.log(res);
+      });
   }
 
-
-  getdetails() : Observable<any> {
-    console.log("service hitted")
-    this.store.select(selectUserPhone).subscribe(phone => {
+  getdetails(): Observable<any> {
+    console.log('service hitted');
+    this.store.select(selectUserPhone).subscribe((phone) => {
       this.phone = phone;
-    })
-    var url = environment.apiurl + "userdetails/" + this.phone;
+    });
+    var url = environment.apiurl + 'verify/getCode/?phonenumber=' + this.phone;
     return this.http.get(url);
   }
 
-  getQuestion() : Observable<any> {
+  getQuestion(): Observable<any> {
     return this.http.get(`http://localhost:3000/questions`);
   }
 }
-

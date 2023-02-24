@@ -9,40 +9,54 @@ import { QuestionsComponent } from './questions/questions.component';
 import { ScenariosComponent } from './scenarios/scenarios.component';
 import { TestingComponent } from './testing/testing.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { VerifyOtpComponent } from './verifyotp/verifyotp.component';
 
 const routes: Routes = [
-  { path : 'login', component: AccloginComponent },
+  { path: 'login', component: AccloginComponent },
   {
-    path : '', component: HomeComponent
+    path: '',
+    component: HomeComponent,
   },
   {
-    path : 'scenarios', component: ScenariosComponent
+    path: 'scenarios',
+    component: ScenariosComponent,
   },
   {
-    path : 'questions', component: QuestionsComponent
+    path: 'questions',
+    component: QuestionsComponent,
   },
   {
-    path : 'blogs', component: BlogComponent
+    path: 'blogs',
+    component: BlogComponent,
   },
   {
-    path : 'userprofile', component: UserprofileComponent
+    path: 'userprofile',
+    component: UserprofileComponent,
   },
   {
-    path : 'questions-admin', component: QuestionsAdminComponent
+    path: 'questions-admin',
+    component: QuestionsAdminComponent,
   },
   {
-    path : 'testing', component: TestingComponent
+    path: 'testing',
+    component: TestingComponent,
   },
   {
-    path : 'login-form', component: LoginFormComponent
+    path: 'login-form',
+    component: LoginFormComponent,
   },
   {
-    path : 'acclogin', component: AccloginComponent
-  }
+    path: 'acclogin',
+    component: AccloginComponent,
+  },
+  {
+    path: 'verifyOtp',
+    component: VerifyOtpComponent,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

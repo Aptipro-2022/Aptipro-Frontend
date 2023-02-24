@@ -1,0 +1,93 @@
+.topname {
+    position: absolute;
+    width: 243px;
+    height: 80px;
+    left: 20px;
+    top: 20px;
+    font-family: 'Feather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+    background: linear-gradient(90deg, #1488CC 0%, #2B32B2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.box {
+    box-sizing: border-box;
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    left: 500px;
+    top: 83px;
+    background: #ECF0F3;
+    border: 1px solid #FFFFFF;
+    box-shadow: -20px -20px 100px #FFFFFF, 20px 20px 100px #D1D9E6;
+    border-radius: 20px;
+}
+
+.text {
+    text-align: center;
+    margin: 20px 200px 20px 200px;
+    font-family: 'FONTSPRING DEMO - Proxima Nova Extrabold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 117px;
+    align-items: center;
+    text-transform: uppercase;
+    color: #CACACA;
+}
+
+.phoneform {
+    margin: 20px 200px 20px 200px;
+}
+
+.phonelabel {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.phoneinput {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 8px;
+    width: 569px;
+    height: 80px;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(64, 64, 64, 0.6);
+    border-radius: 10px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.submit {
+    color: white;
+    font-size: 36px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 74px;
+    background: linear-gradient(91.22deg, #1488CC 0.1%, #2B32B2 103.23%);
+    border-radius: 40px;
+}
+
+.submitbtn {
+    padding-left: 90px;
+}
+
+.phoneinput {
+    font-size: 24px;
+}

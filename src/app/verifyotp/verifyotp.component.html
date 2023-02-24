@@ -1,0 +1,29 @@
+<h1 class="topname">aptipro</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 box">
+      <div class="text">
+        <p>LET'S GET<br />STARTED</p>
+      </div>
+      <form class="phoneform">
+        <div class="phone">
+          <label class="phonelabel">OTP</label>
+          <input
+            type="phone"
+            class="form-control phoneinput"
+            name="otp"
+            [(ngModel)]="userOtp.otp"
+          />
+        </div>
+
+        <div class="mt-4 submitbtn">
+          <button type="submit" (click)="proceed(userOtp)" class="btn submit">
+            proceed
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+</div>
