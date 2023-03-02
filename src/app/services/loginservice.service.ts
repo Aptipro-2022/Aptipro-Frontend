@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { UserDetails } from '../models/userdetails';
 import { selectUserPhone } from '../redux/selectors/user-phone.selector';
 import { environment } from 'src/environments/environment';
+import { userOtpState } from '../redux/state/user-otp';
 
 @Injectable({
   providedIn: 'root',
@@ -53,11 +54,15 @@ export class LoginserviceService {
   }
 
   getdetails(): Observable<any> {
-    console.log('service hitted');
     this.store.select(selectUserPhone).subscribe((phone) => {
       this.phone = phone;
     });
     var url = environment.apiurl + 'verify/getCode/?phonenumber=' + this.phone;
+    return this.http.get(url);
+  }
+
+  verifyOtp(userOtp: userOtpState): Observable<any> {
+    var url = environment.apiurl + 'verify/getCode/?code=' + userOtp.otp + '&phonenumber='+ this.phone;
     return this.http.get(url);
   }
 

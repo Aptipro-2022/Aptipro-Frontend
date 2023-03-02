@@ -26,7 +26,7 @@ width: 100%;
     font-weight:600;
 }
 .body button{
-    background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%);
+    background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
     color:white; 
     border-radius:20px; 
     padding:0.8% 3% 0.8% 3%; 
@@ -46,7 +46,7 @@ width: 100%;
         color: #404040;
     }
     .get-started button{
-        background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%);
+        background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
         border: 1px solid rgba(64, 64, 64, 0.2);
         border-radius: 5px;
         width: 199px;
@@ -106,7 +106,7 @@ align-self: stretch;
 }
 .midpart button{
     margin-top:2%; 
-    background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%); 
+    background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
     color:white; 
     border-radius:20px; padding:0.8% 3.5% 0.8% 3.5%;
 }
@@ -145,7 +145,7 @@ align-self: stretch;
     .midpart button{
         width: 179px;
         height: 42px;
-        background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%);
+        background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
         border-radius: 5px;
         padding: 8px 40px;
     }
@@ -165,7 +165,7 @@ align-self: stretch;
 } */
 
 .midheader {
-    background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%);
+    background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
 }
 
 .concepts {
@@ -183,7 +183,7 @@ align-self: stretch;
 }
 @media (max-width:500px) {
     .midheader{
-        background: linear-gradient(90.36deg, #237216 0.31%, #1A6716 99.69%);
+        background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
         padding: 20px 0 20px 0;
     }
     .concepts{
@@ -254,7 +254,7 @@ border-bottom: 1px solid rgba(64, 64, 64, 0.2);
     margin: auto;
 }
 .lastbody button{
-    background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%); 
+    background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
     color:#EFEFEF; 
     border-radius:20px; 
     padding:10px 40px; 
@@ -285,7 +285,7 @@ border-bottom: 1px solid rgba(64, 64, 64, 0.2);
         width: 196px;
         height: 46px;
         padding: 8px 40px;
-        background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%);
+        background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
         border-radius: 5px;
     }
 }
@@ -509,7 +509,7 @@ background-color: #F9F9F9;
 
 #subscription-home{
     text-align: center;
-    background: linear-gradient(90.36deg, #267516 0.31%, #014917 99.69%);
+    background: linear-gradient(45.58deg, #2B32B2 3.16%, #1488CC 95.98%);
     padding: 70px;
     color: white;
 }

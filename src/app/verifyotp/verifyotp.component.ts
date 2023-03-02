@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { userOtpState } from '../redux/state/user-otp';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { selectUserPhone } from '../redux/selectors/user-phone.selector';
+import { LoginserviceService } from '../services/loginservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-verifyotp',
@@ -11,24 +14,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class VerifyOtpComponent implements OnInit {
   public signupform: boolean = true;
+  phone : any;
   userOtp: userOtpState = { otp: '' };
-  constructor(private store: Store, private http: HttpClient) {}
+  constructor(private store: Store, private Loginservice : LoginserviceService, private router : Router) {}
 
-  ngOnInit(): void {}
-
-  signup() {
-    this.signupform = true;
-  }
-
-  signin() {
-    this.signupform = false;
-  }
-
-  createAcc() {
-    // console.log(this.details);
+  ngOnInit(): void {
+    this.store.pipe(select(selectUserPhone)).subscribe(res => {
+      this.phone = res;
+    })
   }
 
   proceed(userOtp: userOtpState) {
+    this.Loginservice.verifyOtp(userOtp).subscribe(res => {
+      if(res.status == 'pending') {
+        this.router.navigate(['/scenarios'])
+      }
+    });
     console.log(userOtp);
     var url =
       environment.apiurl +
