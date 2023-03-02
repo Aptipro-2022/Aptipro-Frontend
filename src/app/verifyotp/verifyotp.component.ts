@@ -30,5 +30,22 @@ export class VerifyOtpComponent implements OnInit {
         this.router.navigate(['/scenarios'])
       }
     });
+    console.log(userOtp);
+    var url =
+      environment.apiurl +
+      'verify/getCode/?code=' +
+      userOtp.otp +
+      '&phonenumber=' +
+      localStorage.getItem('mobile');
+    fetch(url)
+      .then((res) => res.json())
+      .then((resp) => {
+        console.log(resp);
+        if (resp.status === 'success') {
+          localStorage.removeItem('mobile');
+        }
+      })
+      .catch((e) => console.log('error', e));
+    // this.http.get(url);
   }
 }
