@@ -3,7 +3,7 @@ import { userPhoneState } from '../redux/state/user-phone';
 import { Store } from '@ngrx/store';
 import { setUserPhone } from '../redux/actions/user-phone.action';
 import { loadData } from '../redux/actions/user-details.action';
-import { selectUserDetails } from '../redux/selectors/user-details.selector';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-acclogin',
@@ -14,28 +14,14 @@ export class AccloginComponent implements OnInit {
 
   public signupform:boolean = true;
   userPhone : userPhoneState = { phone:'' };
-  constructor(private store : Store) { }
+  constructor(private store : Store, private router : Router) { }
 
   ngOnInit(): void {
-  }
-
-  signup()
-  {
-    this.signupform = true;
-  }
-
-  signin()
-  {
-    this.signupform = false;
-  }
-
-  createAcc()
-  {
-    // console.log(this.details);
   }
 
   proceed(userPhone : userPhoneState) {
     this.store.dispatch(setUserPhone({userPhone}));
     this.store.dispatch(loadData());
+    this.router.navigate(['/verifyOtp']);
   }
 }
