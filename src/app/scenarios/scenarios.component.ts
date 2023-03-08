@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionsService } from '../services/questions.service';
 
 @Component({
   selector: 'app-scenarios',
@@ -13,9 +14,12 @@ export class ScenariosComponent implements OnInit {
     this.navbarOpen = !this.navbarOpen;
   }
 
-  constructor() { }
+  constructor(private questionservice : QuestionsService) { }
 
   ngOnInit(): void {
+    this.questionservice.getQuestions().subscribe(res => {
+      console.log(res);
+    })
   }
 
 }
