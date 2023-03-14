@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,17 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  homepagehiding : boolean = false;
-  constructor(private router : Router) { }
+  homepagehiding: boolean = false;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  login()
-  {
+  login() {
     this.homepagehiding = true;
-    this.router.navigate(['\login']);
+    // this.router.navigate(['\login']);
   }
 
 }

@@ -4,12 +4,12 @@
     height: 80px;
     left: 20px;
     top: 20px;
-    font-family: 'Feather';
+    font-family: "Feather";
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
     line-height: 80px;
-    background: linear-gradient(90deg, #1488CC 0%, #2B32B2 100%);
+    background: linear-gradient(90deg, #1488cc 0%, #2b32b2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -22,23 +22,23 @@
     height: 80%;
     left: 500px;
     top: 83px;
-    background: #ECF0F3;
-    border: 1px solid #FFFFFF;
-    box-shadow: -20px -20px 100px #FFFFFF, 20px 20px 100px #D1D9E6;
+    background: #ecf0f3;
+    border: 1px solid #ffffff;
+    box-shadow: -20px -20px 100px #ffffff, 20px 20px 100px #d1d9e6;
     border-radius: 20px;
 }
 
 .text {
     text-align: center;
     margin: 20px 200px 20px 200px;
-    font-family: 'FONTSPRING DEMO - Proxima Nova Extrabold';
+    font-family: "FONTSPRING DEMO - Proxima Nova Extrabold";
     font-style: normal;
     font-weight: 800;
     font-size: 96px;
     line-height: 117px;
     align-items: center;
     text-transform: uppercase;
-    color: #CACACA;
+    color: #cacaca;
 }
 
 .phoneform {
@@ -46,7 +46,7 @@
 }
 
 .phonelabel {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -66,7 +66,7 @@
     gap: 8px;
     width: 569px;
     height: 80px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-bottom: 1px solid rgba(64, 64, 64, 0.6);
     border-radius: 10px;
     flex: none;
@@ -80,7 +80,7 @@
     box-sizing: border-box;
     width: 400px;
     height: 74px;
-    background: linear-gradient(91.22deg, #1488CC 0.1%, #2B32B2 103.23%);
+    background: linear-gradient(91.22deg, #1488cc 0.1%, #2b32b2 103.23%);
     border-radius: 40px;
 }
 
@@ -90,4 +90,146 @@
 
 .phoneinput {
     font-size: 24px;
+}
+
+.panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    padding: 2rem;
+    display: flex;
+    gap: 3rem;
+    background: #e9f4ff;
+}
+
+.login-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #292929;
+}
+
+.create-account {
+    color: rgba(28, 60, 161, 0.9);
+    font-size: 12px;
+    font-weight: bolder;
+}
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+
+.margin-t-20 {
+    margin-top: 20px;
+}
+.form-row-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #404040;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 8px;
+    /* width: 358px; */
+    height: 46px;
+    background: #ffffff;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.forgot-pass {
+    text-align: end;
+    font-size: 12px;
+    color: #404040;
+    margin-top: 8px;
+}
+
+.continue-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 8px;
+    height: 46px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500;
+    border: none;
+    background: #1c3ca1;
+    border-radius: 8px;
+}
+.social-icons {
+    display: flex;
+    gap: 1.2rem;
+}
+.having-trouble {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #76768b;
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    flex-basis: 75%;
+    padding-left: 1rem;
+}
+
+.right {
+    flex-basis: 25%;
+}
+
+.robot {
+    width: 150px;
+}
+
+.resend-otp {
+    text-align: right;
+    margin: 0;
+}
+
+button:disabled {
+    background-color: #76768b;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+}
+
+a {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+    .login-title {
+        font-size: 18px;
+    }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   navbarOpen = false;
+  showPanel = false;
+  @ViewChild('sidenav') sidenav!: MatSidenav;
 
+  reason = '';
+
+  close(reason: string) {
+    this.reason = reason;
+    this.sidenav.close();
+  }
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }

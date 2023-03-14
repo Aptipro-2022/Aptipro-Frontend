@@ -1,4 +1,4 @@
-<h1 class="topname">aptipro</h1>
+<!-- <h1 class="topname">aptipro</h1>
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-4"></div>
@@ -18,5 +18,205 @@
             </form>
         </div>
         <div class="col-sm-4"></div>
+    </div>
+</div> -->
+
+
+<div class="panel">
+    <div class="left">
+        <ng-container *ngIf="currentStep ==='login'">
+            <form #loginForm="ngForm">
+                <div class="margin-b-20 margin-t-20">
+                    <h3 class="login-title">Login</h3>
+                    <a (click)="createAccount('createAccount')" class="create-account">or Create Your Account</a>
+                </div>
+
+                <div class="margin-b-20 form-row-col">
+                    <label class="form-label">Email or Phone Number</label>
+                    <input class="form-input" name="email" [(ngModel)]="login.email" #email="ngModel" type="email"
+                        placeholder="Email or Phone Number" required>
+                </div>
+
+                <div class="margin-b-20 form-row-col">
+                    <label class="form-label">Enter Password</label>
+                    <input class="form-input" name="password" [(ngModel)]="login.password" #password="ngModel"
+                        type="password" placeholder="Enter Password" required>
+                    <a href="#" class="forgot-pass">forgot password?</a>
+                </div>
+
+                <div class="">
+                    <button [disabled]="loginForm.invalid" (click)="signIn()" class="continue-btn margin-b-20">Sign
+                        in</button>
+                </div>
+
+            </form>
+        </ng-container>
+
+        <ng-container *ngIf="currentStep ==='createAccount'">
+            <form #createAccountForm="ngForm">
+                <div class="left">
+
+                    <div class="margin-b-20">
+                        <h3 class="login-title">Let's Get Started</h3>
+                        <a (click)="createAccount('login')" class="create-account">Or login into your account</a>
+                    </div>
+
+                    <div class="margin-b-20 form-row-col">
+                        <label for="" class="form-label">Phone Number</label>
+                        <input class="form-input" type="tel" name="phoneNumber"
+                            [(ngModel)]="createAccountModal.phoneNumber" #phoneNumber="ngModel"
+                            placeholder="Phone Number" required>
+                    </div>
+
+                    <div class="margin-b-20 form-row-col">
+                        <label for="" class="form-label">Email Id</label>
+                        <input class="form-input" type="email" name="email" [(ngModel)]="createAccountModal.email"
+                            placeholder="Email Id" required="">
+                    </div>
+
+                    <div class="">
+                        <button [disabled]="createAccountForm.invalid" (click)="currentStep = 'otp'"
+                            class="continue-btn margin-b-20">Continue</button>
+                    </div>
+
+                </div>
+            </form>
+        </ng-container>
+
+        <ng-container *ngIf="currentStep ==='otp'">
+            <form #otpForm="ngForm">
+                <div class="left">
+
+                    <div class="margin-b-20">
+                        <h3 class="login-title">Let's Get Started</h3>
+                        <a (click)="createAccount('login')" class="create-account">Or login into your account</a>
+                    </div>
+
+                    <div class="margin-b-20 form-row-col">
+                        <label for="" class="form-label">Phone Number</label>
+                        <input class="form-input" type="number" name="phoneNumber"
+                            [(ngModel)]="otpFormModal.phoneNumberOtp" #phoneNumber="ngModel" placeholder="Phone Number"
+                            required>
+                        <p class="resend-otp">
+                            <span style="color: rgba(43, 42, 53, 0.4);">Did not receive?</span><a href="#"
+                                class="forgot-pass"> Resend OTP</a>
+                        </p>
+                    </div>
+
+                    <div class="margin-b-20 form-row-col">
+                        <label for="" class="form-label">Email Id</label>
+                        <input class="form-input" type="number" name="email" [(ngModel)]="otpFormModal.emailOtp"
+                            placeholder="Email Id" required>
+                        <p class="resend-otp">
+                            <span style="color: rgba(43, 42, 53, 0.4);">Did not receive?</span><a href="#"
+                                class="forgot-pass"> Resend OTP</a>
+                        </p>
+
+                    </div>
+
+                    <div class="">
+                        <button [disabled]="otpForm.invalid" (click)="currentStep = 'password'"
+                            class="continue-btn margin-b-20">Continue</button>
+                    </div>
+
+                </div>
+            </form>
+        </ng-container>
+
+        <ng-container *ngIf="currentStep ==='password'">
+            <form [formGroup]="passwordForm">
+                <div class="left">
+                    <div class="margin-b-20">
+                        <h3 class="login-title">Let's Get Started</h3>
+                        <a (click)="createAccount('login')" class="create-account">Or login into your account</a>
+                    </div>
+
+                    <div class="margin-b-20 form-row-col">
+                        <label class="form-label">Password</label>
+                        <input class="form-input" name="phoneNumber" type="password" formControlName="password"
+                            placeholder="Password" required>
+                    </div>
+
+                    <div class="margin-b-20 form-row-col">
+                        <label class="form-label">Confirm Password</label>
+                        <input class="form-input" type="password" formControlName="confirmPassword"
+                            placeholder="Confirm Password" required>
+                        <div *ngIf="passwordForm.get('confirmPassword')?.errors" class="alert alert-danger">
+                            <div *ngIf="passwordForm.get('confirmPassword')?.errors?.required">Confirm Password is
+                                required</div>
+
+                            <div *ngIf="passwordForm.get('confirmPassword')?.errors?.confirmPasswordValidator">
+                                Passsword and confirm Password didn't match. </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button [disabled]="passwordForm.invalid" class="continue-btn margin-b-20">Sign Up</button>
+                    </div>
+
+                </div>
+            </form>
+        </ng-container>
+
+        <div class="footer">
+            <div class="margin-b-20">
+                <label for="" class="form-label">Or Create with</label>
+                <div class="social-icons">
+                    <img src="assets/images/google.png" alt="">
+                    <img src="assets/images/facebook_logo.png" alt="">
+                </div>
+            </div>
+
+            <div class="having-trouble">
+                <span>Having Trouble?</span>
+                <span>Contact <a href="#" type="email">help@coding.io</a> for support</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="right">
+        <img class="robot" src="assets/images/delivery_robot.png" alt="delivery robot" srcset="">
+    </div>
+</div>
+
+
+<div class="panel" *ngIf="step === 2">
+    <div class="left">
+        <div class="margin-b-20">
+            <h3 class="login-title">Lets Get Started</h3>
+            <a href="#" class="create-account">Or login into your account</a>
+        </div>
+
+        <div class="margin-b-20 form-row-col">
+            <label for="" class="form-label">Phone Number</label>
+            <input class="form-input" type="text" placeholder="Phone Number">
+        </div>
+
+        <div class="margin-b-20 form-row-col">
+            <label for="" class="form-label">Phone Number</label>
+            <input class="form-input" type="email" placeholder="Email Id">
+        </div>
+
+        <div class="">
+            <button class="continue-btn margin-b-20">Continue</button>
+
+        </div>
+
+        <div class="margin-b-20">
+            <label for="" class="form-label">Or Create with</label>
+            <div class="social-icons">
+                <img src="assets/images/google.png" alt="">
+                <img src="assets/images/facebook_logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="having-trouble">
+            <span>Having Trouble?</span>
+            <span>Contact <a href="#" type="email">help@coding.io</a> for support</span>
+        </div>
+
+    </div>
+    <div class="right">
+        <img class="robot" src="assets/images/delivery_robot.png" alt="delivery robot" srcset="">
     </div>
 </div>

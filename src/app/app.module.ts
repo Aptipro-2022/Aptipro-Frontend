@@ -32,9 +32,12 @@ import { QuestionsReducer } from './redux/reducers/questions.reducer';
 import { MatDialogModule } from '@angular/material/dialog';
 import { QuestionsDialogComponent } from './questions-dialog/questions-dialog.component';
 import { VerifyOtpComponent } from './verifyotp/verifyotp.component';
+import { MaterialModule } from './material.module';
+import { CommonModule } from '@angular/common';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HomeComponent,
     MenuComponent,
@@ -49,7 +52,8 @@ import { VerifyOtpComponent } from './verifyotp/verifyotp.component';
     LoginFormComponent,
     QuestionsDialogComponent,
     VerifyOtpComponent,
-  ],
+      CreateAccountComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -63,6 +67,8 @@ import { VerifyOtpComponent } from './verifyotp/verifyotp.component';
     MatInputModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MaterialModule,
+    CommonModule,
     StoreModule.forRoot({
       userPhone: userPhoneReducer,
       userdetails: userdetailsReducer,
@@ -73,4 +79,4 @@ import { VerifyOtpComponent } from './verifyotp/verifyotp.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
